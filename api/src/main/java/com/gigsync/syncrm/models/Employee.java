@@ -6,10 +6,6 @@ import jakarta.persistence.Id;
 
 
 @Entity
-public class Employee {
-    @Id
-    @GeneratedValue
-    private Long id;
-    private String name;
-    protected Employee (){}
+public record Employee (@Id Long id, String name){
 }
+
